@@ -29,7 +29,7 @@
         <span *ngIf="formLogin.get('mensage')?.invalid">ingrese un mensage </span>
       </div>
       <div class="text-center">
-    <button type="submit" class="boton" [disabled]="formLogin.invalid">enviar</button>
+    <button class="boton" [disabled]="formLogin.invalid">enviar</button>
    </div>
 </form>
 </div>
@@ -38,3 +38,4 @@
     {{formLogin.value | json}}
 </div>
 </div>
+<p></p>

@@ -78,9 +78,11 @@ export class HomeComponent  implements OnInit{
     
   }
 
-
+    
+  
   send(): any{
     console.log(this.formLogin.value)
+    alert('gracias por participar')
   }
+}   
 
-}

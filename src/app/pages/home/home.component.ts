@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  implements OnInit{
+
   public formLogin!: FormGroup;
   correo!:string;
 
@@ -37,13 +38,13 @@ export class HomeComponent  implements OnInit{
       asunto:['',
         [
           Validators.required,
-          Validators.maxLength(15)
+          Validators.minLength(10)
         ]
       ],
       mensage:['',
         [
           Validators.required,
-          Validators.maxLength(15)
+          Validators.minLength(10)
         ]
       ]
     })

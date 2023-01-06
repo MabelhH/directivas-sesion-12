@@ -1,30 +1,40 @@
-<div class="container-fluid">
+<div class="container">
 <div class="formulario">
 <form [formGroup]="formLogin" (submit)="send()">
+    <h1>Contactos</h1>
+    <hr class="linea mt-4 ">
     <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text"  formControlName="nombre" class="form-control" id="nombre">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text"  formControlName="nombre" class="form-control rounded" id="nombre">
+        <span *ngIf="formLogin.get('nombre')?.invalid">ingrese un nombre </span>
       </div>
       <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" formControlName="email" class="form-control rounded" id="email" aria-describedby="emailHelp">
+        <span  *ngIf="formLogin.get('email')?.invalid">ingrese un email </span>
       </div>
     <div class="mb-3">
-      <label for="telefono" class="form-label">Telefono</label>
-      <input type="number" formControlName="telefono" class="form-control" id="telefono">
+      <label for="telefono" class="form-label">Telefono:</label>
+      <input type="number" formControlName="telefono" class="form-control " id="telefono">
+      <span *ngIf="formLogin.get('telefono')?.invalid">ingrese un telefono </span>
     </div>
     <div class="mb-3">
-        <label for="asunto" class="form-label">Asunto</label>
-        <input type="text" formControlName="asunto" class="form-control" id="asunto">
+        <label for="asunto" class="form-label">Asunto:</label>
+        <input type="text" formControlName="asunto" class="form-control " id="asunto">
+        <span *ngIf="formLogin.get('asunto')?.invalid">ingrese un asunto </span>
       </div>
       <div class="mb-3">
-        <label for="mensage" class="form-label">Mensage</label>
-        <input type="text" formControlName="mensage" class="form-control" id="mensage">
+        <label for="mensage" class="form-label">Mensage:</label>
+        <input type="text" formControlName="mensage" class="form-control " id="mensage">
+        <span *ngIf="formLogin.get('mensage')?.invalid">ingrese un mensage </span>
       </div>
-    <button [disabled]="formLogin.invalid">Submit</button>
+      <div class="text-center">
+    <button type="submit" class="boton" [disabled]="formLogin.invalid">enviar</button>
+   </div>
 </form>
 </div>
-<div class="bg-black p-4 text-white text-1xl text-yellow-400 mt-4">
+<br>
+<div class="resultado">
     {{formLogin.value | json}}
 </div>
 </div>

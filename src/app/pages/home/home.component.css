@@ -1,0 +1,36 @@
+.container{
+margin: 45px;
+border: 2px solid  aquamarine;
+margin-top: 15px;
+border-radius:8px ;
+height: 800px;
+}
+h1{
+    margin-top: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.linea{
+    color: aquamarine;
+}
+label{
+    background-color: rgb(94, 232, 232);
+    width: 160px;
+    border-radius: 6px;
+    padding-left: 15px;
+}
+.boton{
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(33, 202, 33) ;
+    border-radius: 4px;
+    border: 2px solid rgb(13, 157, 13) ;
+    width: 100px;
+    padding: 4px;
+    font-size: 20px;
+}
+.resultado{
+ background-color: rgb(222, 177, 245);
+ text-align: center;
+ 
+}

@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div class="container-fluid">
+<div class="formulario">
+<form [formGroup]="formLogin" (submit)="send()">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text"  formControlName="nombre" class="form-control" id="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp">
+      </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Telefono</label>
+      <input type="number" formControlName="telefono" class="form-control" id="telefono">
+    </div>
+    <div class="mb-3">
+        <label for="asunto" class="form-label">Asunto</label>
+        <input type="text" formControlName="asunto" class="form-control" id="asunto">
+      </div>
+      <div class="mb-3">
+        <label for="mensage" class="form-label">Mensage</label>
+        <input type="text" formControlName="mensage" class="form-control" id="mensage">
+      </div>
+    <button [disabled]="formLogin.invalid">Submit</button>
+</form>
+</div>
+<div class="bg-black p-4 text-white text-1xl text-yellow-400 mt-4">
+    {{formLogin.value | json}}
+</div>
+</div>
